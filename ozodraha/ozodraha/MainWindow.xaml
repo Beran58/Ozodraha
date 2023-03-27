@@ -9,23 +9,138 @@
     <Grid Margin="1,0,-1,0">
         <ListBox Visibility="Collapsed" x:Name="deviceList"  HorizontalAlignment="Left" Height="108" Margin="0,20,0,0" VerticalAlignment="Top" Width="137" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged" Panel.ZIndex="255"/>
         <Button Visibility="Collapsed" x:Name="connectBt" Content="Connect" HorizontalAlignment="Left" Height="29" Margin="68,127,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click" Panel.ZIndex="255"/>
+        <Grid x:Name="Active_options" Visibility="Hidden" HorizontalAlignment="Center" Height="600" Margin="0,0,0,0" VerticalAlignment="Center" Width="1200" Panel.ZIndex="300" Background="#FFFCFCFC">
+            <Border CornerRadius="30" Panel.ZIndex="300" BorderBrush="Black" BorderThickness="3">
+
+
+            </Border>
+            <ComboBox x:Name="Color_codes" VerticalContentAlignment="Center" Margin="600,170,300,380" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontWeight="DemiBold" SelectionChanged="Color_codes_SelectionChanged">
+                <ComboBoxItem IsSelected="True">
+                    <TextBlock>OFF</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Short Super Slow</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Slow</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Cruise</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Fast</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Turbo</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Nitro Boost</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Left</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Straight</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Right</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Switch Left</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Switch Straight</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Switch Right</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>U-Turn</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>U-Turn(end)</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Tornado</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Zigzag</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Spin</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Backwalk</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Pause</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Timer ON</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Timer OFF</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Win (Play Again)</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Win (Game Over)</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Enable X-ing Counter</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Enable Turn Counter</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Enable Path Color Counter</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Enable Point Counter</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Point +1</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Point -1</TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+            <Rectangle x:Name="Preview" HorizontalAlignment="Left" Height="300" Margin="83,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="300"/>
+            <Button x:Name="RotateCounter" Content="Rotate Counterclockwise" HorizontalAlignment="Left" Margin="600,329,0,0" VerticalAlignment="Top" Height="52" Width="150" Click="RotateCounter_Click"/>
+            <Button x:Name="RotateClock" Content="Rotate Clockwise" HorizontalAlignment="Left" Margin="750,329,0,0" VerticalAlignment="Top" Height="52" Width="150" Click="RotateClock_Click"/>
+            <Button x:Name="Confirm" Content="Confirm" HorizontalAlignment="Left" Margin="675,404,0,0" VerticalAlignment="Top" Height="34" Width="150" FontSize="18" Click="Confirm_Click"/>
+            <TextBox x:Name="Address" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="600,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="45" FontSize="18"/>
+
+
+        </Grid>
         <Button Visibility="Collapsed" x:Name="discoverBt" Content="Discover" HorizontalAlignment="Left" Height="29" Margin="1,127,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1" Panel.ZIndex="255"/>
-        <Button Content="Connection" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="137" Click="Button_Click_3" Panel.ZIndex="255"/>
-        <Grid HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="1920" Background="#FFE3E3E3"/>
+
+        <Grid Height="20" VerticalAlignment="Top" Background="#FFE3E3E3">
+            <Button Content="Connection" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="137" Click="Button_Click_3" Panel.ZIndex="255"/>
+            <Button Content="Settings" HorizontalAlignment="Left" Height="20"  VerticalAlignment="Center"  Width="137" Click="Button_Click_5" Margin="137,0,0,0"/>
+        </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <Border Margin="30,42,0,30" BorderBrush="Black" BorderThickness="3" CornerRadius="30,30,30,30" Background="#FFF6F6F6">
-                <Grid>
-                    <TextBox x:Name="debug" Margin="0,58,0,0" ></TextBox>
+            <Border Margin="0,42,0,22" BorderBrush="Black" BorderThickness="3" CornerRadius="30,30,30,30" Background="#FFF6F6F6" Width="167">
+                <Grid x:Name="tileMenu" Margin="15,15,15,15" Loaded="tileMenuLoaded">
                 </Grid>
             </Border>
-            <Border  Margin="30,42,30,30" CornerRadius="30,30,30,30" Background="#FFF6F6F6" BorderBrush="Black"  BorderThickness="3" Panel.ZIndex="615616" Grid.Column="1">
-                <Grid  x:Name="field" Loaded="Field_Loaded" Margin="15,15,15,15">
-                </Grid>
+            <Border Margin="30,42,30,22" CornerRadius="30,30,30,30" Background="#FFF6F6F6" BorderBrush="Black"  BorderThickness="3" Panel.ZIndex="615616" Grid.Column="1">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <Grid  x:Name="field" Loaded="Field_Loaded" Margin="15,15,15,15" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
+                    </Grid>
+                </ScrollViewer>
             </Border>
         </Grid>
+        <Rectangle Visibility="Hidden" x:Name="settings" HorizontalAlignment="Left" Height="118" Margin="137,19,0,0" Stroke="Black" VerticalAlignment="Top" Width="137" Fill="#FFE3E3E3" Panel.ZIndex="254"/>
+        <Label Visibility="Hidden" x:Name="widthlabel" Content="Field width:" HorizontalAlignment="Left" Height="26" Margin="144,25,0,0" VerticalAlignment="Top" Width="83" BorderBrush="Black" BorderThickness="1,1,0,1" Panel.ZIndex="255"/>
+        <Label Visibility="Hidden" x:Name="heightLabel" Content="Field height:" HorizontalAlignment="Left" Height="26" Margin="144,65,0,0" VerticalAlignment="Top" Width="83" BorderThickness="1,1,0,1" BorderBrush="Black" Panel.ZIndex="255"/>
+        <Button Visibility="Hidden" x:Name="sizeConfirm" Content="Confirm" HorizontalAlignment="Left" Height="27" Margin="144,103,0,0" VerticalAlignment="Top" Width="121" Panel.ZIndex="255" Click="sizeConfirm_Click"/>
+        <TextBox Visibility="Hidden" x:Name="widthText" HorizontalAlignment="Left" Height="26" Margin="227,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" Panel.ZIndex="255"/>
+        <TextBox Visibility="Hidden" x:Name="heightText" HorizontalAlignment="Left" Height="26" Margin="227,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" Panel.ZIndex="255"/>
     </Grid>
 </Window>
