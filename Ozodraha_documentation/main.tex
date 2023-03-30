@@ -1,0 +1,120 @@
+\documentclass[12pt]{book}
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+
+
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{geometry}
+\geometry{a4paper,left=2.5cm,right=2.5cm}
+\usepackage{hyperref}
+\graphicspath{./images/}
+\linespread{1.3}
+\title{Ozodráha}
+\author{Matěj Beran }
+\date{January 2023}
+
+\begin{document}
+\flushbottom
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \Large DELTA – Střední škola informatiky a ekonomie s.r.o
+        
+        Ke Kamenci 151, 530 03 Pardubice
+
+        
+        \includegraphics[width=0.6\textwidth]{images/logo_delta.png}
+        
+        
+        {\Huge
+        \textbf{Maturitní projekt}}
+            
+        \vspace{0.5cm}
+        \text
+        Ozodráha
+            
+        \vspace{1.5cm}
+            
+        \vfill
+            
+        Jméno a příjmení: Matěj Beran\\
+        Třída: 4.A\\
+        Studijní obor: Informační technologie 18-20-M/01\\
+        Školní rok: 2022/2023
+            
+        \vspace{0.8cm}
+            
+            
+            
+    \end{center}
+\end{titlepage}
+   \includepdf[]{2022.Beran_3A_Zadani_maturitniho_projektu_(Koupil).pdf}
+   \newpage
+   \thispagestyle{empty}
+ \noindent{\Large{\bfseries{Prohlášení}}}
+
+\noindent Prohlašuji, že jsem svou práci vypracoval samostatně a použil jsem pouze zdroje uvedené v~seznamu bibliografických záznamů.
+
+\noindent Nemám závažný důvod proti zpřístupňování této práce v~souladu se zákonem č. 121/2000 Sb., o~právu autorském, o~právech souvisejících s~právem autorským a o~změně některých zákonů (autorský zákon) ve znění pozdějších předpisů. 
+
+\vspace{24 pt}
+
+\noindent V~Pardubicích dne 31. 3. 2023 \dotfill{}\hspace{\stretch{0.5}} 
+
+\hspace{6cm} Matěj Beran
+\newpage
+\thispagestyle{empty}
+\noindent{\Large{\bfseries{Poděkování}}}
+
+\noindent Chtěl bych poděkovat RNDr. Janu Koupilovi, Ph.D. za vedení projektu, a za podnětné návrhy na vývoj a tvorbu projektu i této práce. Dále bych rád poděkoval všem, kdo přispěli svým názorem k návrhu a tvorbě tohoto projektu.
+\newpage
+\thispagestyle{empty}
+\noindent{\Large{\bfseries{Abstrakt}}}
+
+\noindent Tato práce dokumentuje návrh, vývoj a tvorbu modulární stavebnice drah pro roboty Ozobot, zaměřenou na výuku základů programování u dětí školního věku. Realizace projektu zahrnuje fyzickou část, elektrotechnickou část a softwarovou/firmwarovou část. 
+
+\noindent{\Large{\bfseries{Klíčová slova}}}
+
+\noindent Programování, Elektrotechnika, Ozobot, C\#, výuková pomůcka
+
+\noindent{\Large{\bfseries{Abstract}}}
+
+\noindent This document describes the design, development and creation of a modular building set of tracks for Ozobot robots, aimed to improve the education of basic programming principles of school-aged children. The implementation of this project includes the physical part, electrical engineering part and software/firmware part.
+
+\noindent{\Large{\bfseries{Keywords}}}
+
+\noindent Programming, Electrical Engineering, Ozobot, C\#, educational tool
+
+\newpage
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\input{intro}
+\input{design}
+\input{conslusion}
+
+\begin{thebibliography}{99}
+\bibitem{CSharp}
+Prohlídka jazyka C\#: přehled [online]. 2022 [cit. 2023-03-23].\\ Dostupné z:\\ https://learn.microsoft.com/cs-cz/dotnet/csharp/tour-of-csharp/
+\bibitem{.NET}
+.NET Documentation [online]. [cit. 2023-03-23].\\ Dostupné z:\\ https://learn.microsoft.com/en-us/dotnet/
+\bibitem{WPF}
+What is Windows Presentation Foundation: WPF .NET.[online]. [cit. 2023-03-23].\\ Dostupné z:\\ https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-7.0
+\bibitem{ATtiny826}
+59B0F Datasheet: ATtiny424/426/427/824/826/827. [online]. 2021 [cit. 2023-03-23].\\ Dostupné z:\\ https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny424-426-427-824-826-827-DataSheet-DS40002311A.pdf
+\bibitem{i2c}
+UM10204: ATtiny424/426/427/824/826/827. [online]. 2007 [cit. 2023-03-23].\\ Dostupné z:\\ https://web.archive.org/web/20110904124830/\\http://www.nxp.com/documents/user\_manual/UM10204.pdf
+\bibitem{TWI}
+What is TWI?. [online]. 2018 [cit. 2023-03-23].\\ Dostupné z:\\ https://ww1.microchip.com/downloads/en/DeviceDoc/90003181A.pdf
+\bibitem{i2c_graph}
+I2C: Sparkfun. Sparkfun [online]. Niwot, Colorado [cit. 2023-03-22].\\ Dostupné z:\\ https://learn.sparkfun.com/tutorials/i2c/all
+\bibitem{32feet}
+FOOT, Peter. 32feet.NET: InTheHand. In The Hand Ltd [online]. [cit. 2023-03-22].\\ Dostupné z:\\ https://inthehand.com/components/32feet/
+\end{thebibliography}
+\listoffigures
+\end{document}
